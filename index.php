@@ -100,7 +100,7 @@
             echo $_SESSION['message1'];
         }
         ?>
-    </div>
+    
     <?php
         $_SESSION['num1'] = $num1;
         $_SESSION['num2'] = $num2;        

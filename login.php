@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="row">
-    <div class="col-sm-4 col-sm-offset-3 red">
+    <div class="col-sm-4 col-sm-offset-4 red">
         <?php
             if (isset($_SESSION['error'])) {
                 echo $_SESSION['error'];

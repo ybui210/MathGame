@@ -5,9 +5,12 @@
 <head>
 	<title>Math Game</title>
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="style.css" rel="stylesheet">
   <meta charset="utf-8" />
 </head>
-    
+<?php
+    session_start();
+?>   
 <body>
     <div class="container"><div class="row">
     <div class="col-sm-10 col-sm-offset-1"><h1>Please login to enjoy our math game.</h1></div>
@@ -32,6 +35,15 @@
         <div class="col-sm-3 col-sm-offset-4">
             <button type="submit" class="btn btn-primary">Login</button>
         </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-4 col-sm-offset-3 red">
+        <?php
+            if (isset($_SESSION['error'])) {
+                echo $_SESSION['error'];
+            }
+        ?>
+    </div>
     </div>
 </form>
 <div class="row">

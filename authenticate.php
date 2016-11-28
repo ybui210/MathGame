@@ -1,14 +1,17 @@
 <?php
+session_start();
 $email = $_POST['email'];
 $pwd = $_POST['password'];
 if (($email=="a@a.a") && ($pwd=="aaa")) {
-    session_start();
+    
     header ("Location: index.php"); 
-    exit;
+    die();
+    session_destroy();
     
 } else {
+    $_SESSION['error'] = "Invalid login credential.";
     header ("Location: login.php"); 
     exit;
-    echo "Invalid login creentials";
+    
 }
     
